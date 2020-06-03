@@ -24,10 +24,12 @@ class plgButtonYoutubeGalleryButton extends JPlugin
         
         $app = JFactory::getApplication();
 
+		$link='/index.php?option=com_youtubegallery&amp;view=listandthemeselection&amp;tmpl=component&amp;e_name='.$name;
 		if($app->isSite())
-            $button->set('link', '/administrator/index.php?option=com_youtubegallery&amp;view=listandthemeselection&amp;tmpl=component&amp;e_name='.$name);
+            $button->set('link', $link);
         else
-            $button->set('link', '/index.php?option=com_youtubegallery&amp;view=listandthemeselection&amp;tmpl=component&amp;e_name='.$name);
+			$button->set('link', '/administrator'.$link);
+            
             
             
         $button->options = "{handler: 'iframe', size: {x: 800, y: 500}, id:'ygb', name:'ygbn'}";
