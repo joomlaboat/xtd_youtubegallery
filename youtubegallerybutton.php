@@ -7,7 +7,6 @@ jimport( 'joomla.plugin.plugin' );
 
 class plgButtonYoutubeGalleryButton extends JPlugin
 {
-
     public function onDisplay($name)
 	{
         $css = ".icon-YoutubeGalleryButton {
@@ -30,13 +29,8 @@ class plgButtonYoutubeGalleryButton extends JPlugin
         else
 			$button->set('link', '/administrator'.$link);
             
-            
-            
         $button->options = "{handler: 'iframe', size: {x: 800, y: 500}, id:'ygb', name:'ygbn'}";
-        
-        
         
         return $button;
 	}
-    
 }
