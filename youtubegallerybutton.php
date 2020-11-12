@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * YoutubeGallery Joomla! Button
+ * @author Ivan Komlev <support@joomlaboat.com>
+ * @link http://www.joomlaboat.com
+ * @GNU General Public License
+ **/
+ 
  // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
