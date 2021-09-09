@@ -30,7 +30,8 @@ class plgButtonYoutubeGalleryButton extends JPlugin
         $app = JFactory::getApplication();
 
 		$link='/index.php?option=com_youtubegallery&amp;view=listandthemeselection&amp;tmpl=component&amp;e_name='.$name;
-		if($app->isSite())
+		
+		if($app->isClient('site'))
             $button->set('link', $link);
         else
 			$button->set('link', '/administrator'.$link);
