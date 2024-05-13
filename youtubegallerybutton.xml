@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later.</license>
     <authorEmail>support@joomlaboat.com</authorEmail>
     <authorUrl>https://joomlaboat.com</authorUrl>
-    <version>5.6.0</version>
+    <version>5.6.1</version>
     <description>PLG_YOUTUBEGALLERYBUTTON_XML_DESCRIPTION</description>
     <namespace path="src">YoutubeGallery\Plugin\EditorsXtd\YoutubeGalleryButton</namespace>
     <files>
@@ -18,5 +18,8 @@
     <languages>
         <language tag="en-GB">language/en-GB/plg_editors-xtd_youtubegallerybutton.ini</language>
         <language tag="en-GB">language/en-GB/plg_editors-xtd_youtubegallerybutton.sys.ini</language>
+
+        <language tag="es-ES">language/es-ES/plg_editors-xtd_youtubegallerybutton.ini</language>
+        <language tag="es-ES">language/es-ES/plg_editors-xtd_youtubegallerybutton.sys.ini</language>
     </languages>
 </extension>
