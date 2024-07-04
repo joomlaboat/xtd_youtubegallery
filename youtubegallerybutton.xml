@@ -2,12 +2,12 @@
 <extension type="plugin" method="upgrade" group="editors-xtd">
     <name>plg_editors-xtd_youtubegallerybutton</name>
     <author>JoomlaBoat.com</author>
-    <creationDate>May 2024</creationDate>
+    <creationDate>July 2024</creationDate>
     <copyright>Ivan Komlev. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later.</license>
     <authorEmail>support@joomlaboat.com</authorEmail>
     <authorUrl>https://joomlaboat.com</authorUrl>
-    <version>5.6.1</version>
+    <version>5.6.2</version>
     <description>PLG_YOUTUBEGALLERYBUTTON_XML_DESCRIPTION</description>
     <namespace path="src">YoutubeGallery\Plugin\EditorsXtd\YoutubeGalleryButton</namespace>
     <files>
