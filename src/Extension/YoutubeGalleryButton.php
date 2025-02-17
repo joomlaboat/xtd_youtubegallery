@@ -3,19 +3,20 @@
  * @package     YoutubeGallery
  * @subpackage  Editors-xtd.youtubegallerybutton
  * @author      Ivan Komlev <support@joomlaboat.com>
- * @copyright   (C) 2024 Ivan Komlev. <https://www.joomlaboat.com>
+ * @copyright   (C) 2025 Ivan Komlev. <https://www.joomlaboat.com>
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  **/
 
 namespace YoutubeGallery\Plugin\EditorsXtd\YoutubeGalleryButton\Extension;
 
 use Exception;
+use Joomla\CMS\Factory;
 use Joomla\CMS\Object\CMSObject;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\CMS\Uri\Uri;
 
 // phpcs:disable PSR1.Files.SideEffects
-\defined('_JEXEC') or die;
+defined('_JEXEC') or die;
 // phpcs:enable PSR1.Files.SideEffects
 
 /**
@@ -45,15 +46,21 @@ final class YoutubeGalleryButton extends CMSPlugin //implements SubscriberInterf
      */
     public function onDisplay($name)
     {
-        // Register the asset "editor-button.<button name>", will be loaded by the button layout
-        $this->getApplication()->getDocument()->getWebAssetManager()
-            ->registerScript(
-                'editor-button.' . $this->_name,
-                Uri::root() . 'plugins/editors-xtd/youtubegallerybutton/js/modal.js',
-                [],
-                ['type' => 'module'],
-                ['editors', 'joomla.dialog']
-            );
+		$document = Factory::getApplication()->getDocument();
+		$wa = $document->getWebAssetManager();
+
+		// Register the script if not already registered
+		if (!$wa->assetExists('script', 'editor-button.youtubegallery')) {
+			$wa->registerScript(
+				'editor-button.youtubegallery',
+				Uri::root() . 'plugins/editors-xtd/youtubegallerybutton/js/modal.js',
+				[],
+				['type' => 'module']
+			);
+		}
+
+		// Use the script (enqueue it for loading)
+		$wa->useScript('editor-button.youtubegallery');
 
         $link = 'index.php?option=com_youtubegallery&amp;view=listandthemeselection&amp;tmpl=component&amp;e_name=' . $name;
 
