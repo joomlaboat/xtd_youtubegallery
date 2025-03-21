@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later.</license>
     <authorEmail>support@joomlaboat.com</authorEmail>
     <authorUrl>https://joomlaboat.com</authorUrl>
-    <version>5.6.7</version>
+    <version>5.6.8</version>
     <description>PLG_YOUTUBEGALLERYBUTTON_XML_DESCRIPTION</description>
     <namespace path="src">YoutubeGallery\Plugin\EditorsXtd\YoutubeGalleryButton</namespace>
     <files>
